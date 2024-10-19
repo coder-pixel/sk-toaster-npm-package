@@ -1,6 +1,5 @@
 {
-  "name": "notificationpackage",
-  "private": true,
+  "name": "sk-notificationpackage",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -23,5 +22,22 @@
     "eslint-plugin-react-refresh": "^0.4.12",
     "globals": "^15.9.0",
     "vite": "^5.4.8"
-  }
+  },
+  "description": "a simple notification package",
+  "main": "App.jsx",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/coder-pixel/sk-toaster-npm-package.git"
+  },
+  "keywords": [
+    "toaster",
+    "notification",
+    "npm-package"
+  ],
+  "author": "Sauvik Goel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coder-pixel/sk-toaster-npm-package/issues"
+  },
+  "homepage": "https://github.com/coder-pixel/sk-toaster-npm-package#readme"
 }
