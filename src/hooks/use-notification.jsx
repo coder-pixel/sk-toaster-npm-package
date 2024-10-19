@@ -1,19 +1,24 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Notification from "../components/notification";
 
 const useNotification = (position = "bottom-right") => {
+  let timerRef = useRef({ current: null });
+
   const [notification, setNotification] = useState(null);
 
   const triggerNotification = (notificationProps) => {
-    setNotification(notificationProps);
+    if (timerRef?.current) clearInterval(timerRef?.current);
 
-    setTimeout(() => {
-      setNotification[null];
-    }, notification?.duration);
+    setNotification(notificationProps);
+    console.log({ notificationProps });
+
+    timerRef.current = setTimeout(() => {
+      setNotification(null);
+    }, notificationProps?.duration);
   };
 
   const NotificationComponent = notification ? (
-    <div>
+    <div className={`${position}`}>
       <Notification {...notification} />
     </div>
   ) : null;
